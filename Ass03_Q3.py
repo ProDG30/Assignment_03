@@ -36,7 +36,7 @@ def aitken_acceleration(eigenvalues):
     lambda_k1, lambda_k2, lambda_k3 = eigenvalues[-3:]
     
     # Calculate the accelerated eigenvalue
-    accelerated_lambda = lambda_k3 - (lambda_k3 - lambda_k2)**2 / (lambda_k3 - 2*lambda_k2 + lambda_k1)
+    accelerated_lambda = (lambda_k1*lambda_k3 - lambda_k2**2) / (lambda_k3 - 2*lambda_k2 + lambda_k1)
     
     return accelerated_lambda
 
